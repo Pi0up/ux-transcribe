@@ -1,0 +1,14 @@
+# Acronymes et sigles d'entreprise
+# Règle : indiquez la forme complète et si vous voulez l'expliquer dès la première mention.
+
+DAM:
+  developpement: Digital Asset Management
+  developper_premiere_occurence: true
+
+RGPD:
+  developpement: Règlement Général sur la Protection des Données
+  developper_premiere_occurence: false
+
+MVP:
+  developpement: Produit Minimum Viable
+  developper_premiere_occurence: true

@@ -1,62 +1,68 @@
 # ux-transcribe
 
-> **Skill et outils CLI de transcription de démos et interviews UX en Markdown enrichi.**
+> **Passez de vos vidéos d'interviews et de démos UX à un document de travail propre, illustré et prêt à partager.**
 
-`ux-transcribe` transforme des enregistrements vidéo de démos produit et d'entretiens utilisateurs en documents Markdown exploitables, comprenant la diarisation des locuteurs, des captures d'écran synchronisées et l'application des lexiques métier.
-
----
-
-## 🚀 Fonctionnalités principales
-
-- **Transcription & Diarisation 100% Locale :** Traitement sur machine locale (Whisper + pyannote) sans fuite de données vers des APIs tierces.
-- **Import de transcripts externes :** Prise en charge native des fichiers WebVTT (`.vtt`) avec identification des locuteurs et correction du décalage `--offset`.
-- **Alignement contextuel :** Injection de glossaires métier, acronymes, règles de casse et mapping locuteurs (`context/glossaire.yaml`, `acronymes.yaml`).
-- **Captures clés stabilisées :** Extraction automatique de screenshots non redondants synchronisés avec les démonstrations orales.
-- **CI/CD & Versioning automatique :** Gestion sémantique continue (*Conventional Commits* et Semantic Release).
+`ux-transcribe` est conçu pour les **designers UX, chercheurs UX et Product Managers**. Il analyse vos enregistrements vidéo (partages d'écran, tests utilisateurs, démos produit) pour produire automatiquement un compte-rendu clair avec l'attribution des voix, des captures d'écran prises au bon moment et le respect de votre vocabulaire métier.
 
 ---
 
-## 🛠️ Installation & Démarrage
+## ✨ Pour commencer en 1 minute (Sans technique)
 
-### 1. Prérequis
-- Python 3.11+
-- [uv](https://docs.astral.sh/uv/) ou `pip`
-- `ffmpeg` installé sur le système
+Si vous utilisez l'assistant IA, vous n'avez **aucune ligne de commande à taper** :
+1. Déposez votre vidéo dans le dossier.
+2. Dites simplement à votre assistant :  
+   > *« Peux-tu transcrire ma démo `demo.mp4` ? Nous étions 2 personnes. »*
+3. L'assistant s'occupe de tout et vous livre votre document avec les images.
 
-### 2. Installation en mode développement
+👉 **Consultez le [Guide d'utilisation pas à pas](doc/guide-utilisateur.md)** pour découvrir comment ajouter votre glossaire métier ou masquer des données confidentielles.
+
+---
+
+## 🔒 Confidentialité garantie (100% sur votre ordinateur)
+
+- Vos vidéos et enregistrements de clients **ne quittent jamais votre machine**.
+- Aucun son ni vidéo n'est envoyé sur des serveurs externes.
+- Conforme aux exigences strictes de confidentialité et de RGPD des projets sensibles.
+
+---
+
+## 📑 Exemple de résultat produit
+
+Pour chaque session, vous obtenez un dossier prêt à l'emploi :
+
+```text
+ma-session/
+├── ma-session.md           <--- Votre document (à copier dans Notion, Confluence, Miro)
+└── assets/
+    ├── shot-001.png        <--- Captures d'écran des moments clés
+    └── shot-002.png
+```
+
+Dans votre document :
+- **Chaque personne est identifiée** avec son prénom ou son rôle.
+- **Les timestamps sont précis** pour retrouver facilement un moment dans la vidéo.
+- **Les captures d'écran** s'insèrent automatiquement au moment où la personne montre l'écran.
+- **Vos termes métier** sont correctement orthographiés grâce au glossaire.
+
+---
+
+## 💻 Espace Développeur & Technique
+
+Pour les développeurs qui souhaitent contribuer ou enrichir l'outil :
+
+### Installation
 ```bash
-# Cloner le dépôt
 git clone https://github.com/Pi0up/ux-transcribe.git
 cd ux-transcribe
-
-# Créer l'environnement et installer les dépendances
 uv venv
 uv pip install -e ".[dev]"
 ```
 
-### 3. Lancer les tests
+### Lancer les tests
 ```bash
 uv run pytest
 ```
 
----
-
-## 📖 Utilisation rapide
-
-```bash
-# Téléchargement initial des modèles pour mode hors-ligne
-ux-transcribe setup --token <HF_TOKEN>
-
-# Traitement complet d'une vidéo locale
-ux-transcribe run demo.mp4 --context ./context --speakers 2 --lang fr
-
-# Import direct d'un transcript VTT externe
-ux-transcribe import transcript.vtt --context ./context --offset 00:00:02.5
-```
-
----
-
-## 📚 Documentation
-
-- [Spécification complète du projet](doc/spec/spec.md)
-- [Guide Git & Versioning Automatique](doc/git-workflow.md)
+### Documentation technique
+- 📐 [Spécification technique détaillée](doc/spec/spec.md)
+- 🚀 [Guide Git & Versioning Automatique (Conventional Commits)](doc/git-workflow.md)

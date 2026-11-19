@@ -1,0 +1,7 @@
+# Éléments à flouter automatiquement sur les captures d'écran
+# Ces données ne doivent jamais apparaître en clair dans le document final.
+
+- "adresses email"
+- "mots de passe"
+- "données bancaires ou IBAN"
+- "identifiants de test internes"

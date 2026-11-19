@@ -1,0 +1,5 @@
+# Association des voix aux personnes réelles
+# Remplacez les identifiants automatiques par les vrais prénoms et rôles :
+
+SPEAKER_00: "Camille (Utilisatrice test)"
+SPEAKER_01: "Alexandre (Lead UX)"
