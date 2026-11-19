@@ -1,0 +1,53 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Caches & environments
+.venv/
+venv/
+env/
+ENV/
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Node (semantic-release)
+node_modules/
+package-lock.json
+npm-debug.log*
+
+# Models & Hugging Face local cache
+models/
+hf_cache/
+.cache/
+
+# Large media files (videos & raw audios)
+*.mp4
+*.mov
+*.webm
+*.mkv
+*.avi
+*.wav
+*.m4a
+*.flac
+
+# Session output directories & temp files
+output/
+sessions/
+tmp/
+*.tmp
+
+# OS & IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

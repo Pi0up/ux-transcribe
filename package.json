@@ -1,0 +1,17 @@
+{
+  "name": "ux-transcribe",
+  "version": "0.1.0",
+  "description": "Skill et outils de transcription de démos et interviews UX en Markdown exploitable.",
+  "private": true,
+  "scripts": {
+    "release": "semantic-release",
+    "release:dry": "semantic-release --dry-run"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^7.0.0",
+    "@semantic-release/git": "^11.0.1",
+    "@semantic-release/github": "^11.0.0",
+    "conventional-changelog-conventionalcommits": "^8.0.0",
+    "semantic-release": "^25.0.0"
+  }
+}
